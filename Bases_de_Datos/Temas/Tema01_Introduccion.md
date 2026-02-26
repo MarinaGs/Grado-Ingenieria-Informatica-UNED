@@ -114,7 +114,47 @@ select cliente.nombre_cliente
 from cliente
 where cliente.ciudad_cliente = 'Peguerinos'
 ```
+## 1.6 Diseño de bases de datos
+Los sistemas de bases de datos se diseñan para gestionar grandes cantidades de información. Esas grandes cantidades de información no existen aisladas. Forman parte del funcionamiento de alguna empresa, cuyo producto final puede que sea la información obtenida de la base de datos o algún dispositivo o servicio para el que la base de datos sólo desempeña un papel secundario.
 
+El diseño de bases de datos implica principalmente el diseño del esquema de las bases de datos. En el Capítulo 8 se estudia el proceso general de diseño de las aplicaciones.
+
+### 1.6.1 Proceso de diseño
+La fase inicial del diseño de las bases de datos es caracterizar completamente los requisitos de datos de los hipotéticos usuarios. El resultado de esta fase es la **especificación de los requisitos de los usuarios**.
+
+A continuación, el diseñador elige un modelo de datos y traduce esos requisitos en un **esquema conceptual** de la base de datos. En términos del modelo relacional, esto implica decidir qué atributos capturar y cómo agruparlos en tablas. Existen dos vías principales:
+1. Usar el **modelo entidad-relación** (Apartado 1.6.3).
+2. Emplear algoritmos de **normalización** (Apartado 1.6.4).
+
+El proceso continúa con:
+* **Diseño lógico:** Se relaciona el esquema conceptual con el modelo de implementación del sistema que se va a usar.
+* **Diseño físico:** Se especifican las características físicas (organización de archivos y estructuras de almacenamiento).
+
+### 1.6.2 Diseño de la base de datos para una entidad bancaria
+Para ilustrar el proceso, se consideran las siguientes características de una entidad bancaria:
+* **Sucursales:** Identificadas por un nombre único, ciudad y activos.
+* **Clientes:** Identificados por `id_cliente`, nombre, calle y ciudad. Pueden tener cuentas y préstamos.
+* **Cuentas:** De ahorro o corrientes. Tienen un `número_cuenta` único, saldo y fecha de último acceso.
+* **Préstamos:** Identificados por `número_préstamo`, importe y pagos realizados.
+* **Empleados:** Identificados por `id_empleado`, nombre, teléfono, antigüedad y jefe directo.
+
+### 1.6.3 El modelo entidad-relación
+El modelo de datos entidad-relación (E-R) se basa en un conjunto de objetos básicos, denominados **entidades**, y de las **relaciones** entre esos objetos. 
+
+
+
+La estructura lógica se expresa mediante un diagrama E-R con:
+* **Rectángulos:** Conjuntos de entidades.
+* **Elipses:** Atributos.
+* **Rombos:** Conjuntos de relaciones.
+* **Líneas:** Unen los componentes.
+
+### 1.6.4 Normalización
+El objetivo es generar esquemas que permitan almacenar información sin redundancias innecesarias. Un mal diseño puede provocar:
+* **Repetición de la información:** Malgasta espacio y complica las actualizaciones.
+* **Imposibilidad de representar determinada información:** Por ejemplo, no poder guardar un cliente si aún no tiene una cuenta, a menos que se usen **valores nulos**.
+
+Los valores nulos indican que el valor no existe o es desconocido, pero resultan difíciles de tratar y es preferible evitarlos mediante un buen diseño original.
 
 
 ## 💡 Mis Notas de la UNED
