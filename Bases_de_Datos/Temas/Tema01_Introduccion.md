@@ -156,6 +156,53 @@ El objetivo es generar esquemas que permitan almacenar información sin redundan
 
 Los valores nulos indican que el valor no existe o es desconocido, pero resultan difíciles de tratar y es preferible evitarlos mediante un buen diseño original.
 
+## 1.7 Bases de datos basadas en objetos y semiestructuradas
+Los investigadores han desarrollado modelos de datos para tratar dominios donde el modelo relacional tradicional presenta limitaciones.
+
+### 1.7.1 Modelos de datos basados en objetos
+Se basan en el paradigma de la programación orientada a objetos (POO). Sus conceptos principales aplicados al modelado de datos incluyen:
+* **Herencia e identidad de los objetos.**
+* **Encapsulación:** Ocultación de la información mediante métodos que ofrecen una interfaz.
+* **Sistemas de tipos elaborados:** Incluyen tipos estructurados y colecciones.
+
+El **modelo relacional orientado a objetos** combina estas características con el modelo relacional tradicional.
+
+### 1.7.2 Modelos de datos semiestructurados
+Permiten que elementos del mismo tipo tengan conjuntos de atributos diferentes. El lenguaje **XML (eXtensible Markup Language)** es el representante principal; se usa ampliamente para el intercambio de datos y para representar estructuras anidadas con gran flexibilidad.
+
+---
+
+## 1.8 Almacenamiento de datos y consultas
+Un sistema de bases de datos se divide en dos componentes funcionales principales: el gestor de almacenamiento y el procesador de consultas.
+
+
+
+### 1.8.1 Gestor de almacenamiento
+Es el módulo que proporciona la interfaz entre los datos de bajo nivel (almacenados en disco) y los programas de aplicación o consultas. Sus componentes son:
+* **Gestor de autorizaciones e integridad:** Comprueba restricciones y permisos.
+* **Gestor de transacciones:** Garantiza un estado consistente a pesar de fallos o ejecuciones concurrentes.
+* **Gestor de archivos:** Gestiona el espacio en disco.
+* **Gestor de la memoria intermedia (Buffer Manager):** Trae datos del disco a la memoria principal según sea necesario.
+
+Implementa estructuras físicas como **archivos de datos**, el **diccionario de datos** (metadatos) e **índices** para acceso rápido.
+
+### 1.8.2 El procesador de consultas
+Sus componentes incluyen:
+* **Intérprete del LDD:** Registra definiciones en el diccionario de datos.
+* **Compilador del LMD:** Traduce instrucciones a un plan de evaluación y realiza la **optimización de consultas** (elige el plan de menor coste).
+* **Motor de evaluación de consultas:** Ejecuta las instrucciones de bajo nivel.
+
+---
+
+## 1.9 Gestión de transacciones
+Una **transacción** es una unidad lógica de trabajo que debe cumplir con las propiedades de:
+* **Atomicidad:** El requisito de "todo o nada"; la operación se realiza por completo o no se hace.
+* **Consistencia:** La ejecución debe preservar la corrección de la base de datos (por ejemplo, la suma de saldos en una transferencia).
+* **Durabilidad:** Tras una ejecución correcta, los cambios deben persistir a pesar de fallos del sistema.
+
+Es responsabilidad del sistema de bases de datos realizar la **recuperación de fallos** y el **control de concurrencia** para evitar inconsistencias cuando varios usuarios acceden a los datos simultáneamente.
+
+
 
 ## 💡 Mis Notas de la UNED
 > *Añade aquí conceptos de las videoconferencias o dudas sobre el libro base.*
