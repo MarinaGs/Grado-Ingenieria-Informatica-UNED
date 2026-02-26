@@ -94,6 +94,27 @@ Los valores de los datos almacenados en la base de datos deben satisfacer cierta
 * **Autorización.** Diferenciación entre los usuarios en cuanto al tipo de acceso que se les permite (lectura, inserción, actualización, eliminación).
 
 El LDD obtiene como entrada algunas instrucciones y genera una salida. La salida del LDD se coloca en el **diccionario de datos**, que contiene metadatos—es decir, datos sobre datos. El sistema de bases de datos consulta el diccionario de datos antes de leer o modificar los datos reales.
+## 1.5 Bases de datos relacionales
+Las bases de datos relacionales se basan en el modelo relacional y usan un conjunto de tablas para representar tanto los datos como las relaciones entre ellos. También incluyen un LMD y un LDD. La mayor parte de los sistemas de bases de datos relacionales comerciales emplean el lenguaje SQL.
+
+### 1.5.1 Tablas
+Cada tabla tiene varias columnas, y cada columna tiene un nombre único. 
+El modelo relacional es un ejemplo de **modelo basado en registros**. La base de datos se estructura en registros de formato fijo de varios tipos. Cada tabla contiene registros de un tipo dado y cada tipo de registro define un número fijo de campos, o atributos. Las columnas de la tabla se corresponden con los atributos del tipo de registro.
+
+El modelo relacional oculta los detalles de implementación de bajo nivel (como el uso de comas o nuevas líneas en archivos físicos) a los desarrolladores y usuarios. Es el modelo de datos más ampliamente usado en la actualidad.
+
+> **Nota sobre el diseño:** En el modelo relacional es posible crear esquemas con información duplicada innecesariamente (redundancia). El estudio de cómo distinguir los buenos diseños de esquema de los malos se trata en el Capítulo 7 (Normalización).
+
+### 1.5.2 Lenguaje de manipulación de datos
+El lenguaje de consultas de SQL no es procedimental (es declarativo). Usa como entrada varias tablas y devuelve siempre una sola tabla. 
+
+**Ejemplo de consulta SQL (Selección simple):**
+```sql
+select cliente.nombre_cliente
+from cliente
+where cliente.ciudad_cliente = 'Peguerinos'
+```
+
 
 
 ## 💡 Mis Notas de la UNED
