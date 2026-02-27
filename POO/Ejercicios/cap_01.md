@@ -67,8 +67,20 @@ En esta sección se explora cómo pasar datos de tipo texto a los métodos y có
 </div>
 
 
----
-*Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
+### Ejercicio 1.7: Gestión Dinámica de Múltiples Objetos
+En este ejercicio final de la sección, se integran todos los conceptos aprendidos para gestionar simultáneamente varios objetos con estados independientes.
+
+**Hitos logrados:**
+* **Instanciación masiva:** Creación de diversos objetos (`Circle`, `Square`, `Triangle`, `Person`) en el banco de objetos de BlueJ.
+* **Personalización de atributos:** Configuración de un círculo grande amarillo y otro pequeño verde, practicando el paso de parámetros numéricos y de texto.
+* **Control espacial:** Uso combinado de los métodos `move` para organizar las figuras en el `Canvas`, logrando una composición visual personalizada.
+
+**Resultado visual:**
+
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_7.JPG" width="500">
+</div>
+
 
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
