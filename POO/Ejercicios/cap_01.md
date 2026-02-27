@@ -95,6 +95,20 @@ Este ejercicio permite visualizar la relación directa entre los campos de un ob
   <img src="../../img/POO/ejercicio_1_8.JPG" width="500">
 </div>
 
+### Ejercicio 1.9: Composición de Escenas Complejas
+En este ejercicio se aplica la lógica de objetos para recrear una composición visual específica, integrando múltiples instancias y coordinando sus estados individuales.
+
+**Hitos logrados:**
+* **Modelado y Abstracción:** Identificación de las formas geométricas necesarias (`Circle`, `Square`, `Triangle`, `Person`) para replicar la figura de referencia.
+* **Algoritmo de Construcción:** Ejecución de una secuencia lógica de pasos: creación del objeto, cambio de visibilidad, ajuste de color, redimensionado y posicionamiento mediante coordenadas.
+* **Análisis de Alternativas:** Verificación de que un mismo estado final puede alcanzarse mediante distintos caminos (ej: múltiples movimientos cortos frente a un único desplazamiento preciso), lo que demuestra la flexibilidad de la POO.
+
+**Resultado visual:**
+
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_9.JPG" width="500">
+</div>
+
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
 ---
