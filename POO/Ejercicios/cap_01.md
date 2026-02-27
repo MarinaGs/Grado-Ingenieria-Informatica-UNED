@@ -35,7 +35,7 @@ En este ejercicio se introduce el uso de parámetros para definir de forma preci
 
 **Resultado visual:**
 
-![Evidencia del Ejercicio 1.3](../../img/ejercicio_1_3.JPG)
+![Evidencia del Ejercicio 1.3](../../img/POO/ejercicio_1_3.JPG)
 
 ### Ejercicios 1.4, 1.5 y 1.6: Parámetros de tipo String y Tipado
 En esta sección se explora cómo pasar datos de tipo texto a los métodos y cómo Java reacciona ante errores de sintaxis o valores no definidos.
@@ -47,9 +47,9 @@ En esta sección se explora cómo pasar datos de tipo texto a los métodos y có
 
 **Resultado visual:**
 
-![Evidencia de los ejercicios de color](../../img/ejercicio_1_4.JPG)  
-![Evidencia de los ejercicios de color](../../img/ejercicio_1_5.JPG)  
-![Evidencia de los ejercicios de color](../../img/ejercicio_1_6.JPG)
+![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_4.JPG)  
+![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_5.JPG)  
+![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_6.JPG)
 
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
