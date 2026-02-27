@@ -81,6 +81,21 @@ En este ejercicio final de la sección, se integran todos los conceptos aprendid
   <img src="../../img/POO/ejercicio_1_7.JPG" width="500">
 </div>
 
+### Ejercicio 1.8: Inspección de Objetos y Estado Interno
+Este ejercicio permite visualizar la relación directa entre los campos de un objeto (sus variables) y su representación en la interfaz gráfica.
 
+**Hitos logrados:**
+* **Uso del Inspector de Objetos:** Apertura de la ventana de inspección para monitorizar los valores de los atributos en tiempo real.
+* **Sincronización de Datos:** Observación de cómo al invocar métodos de comportamiento (como `moveLeft`), los valores numéricos de las coordenadas en el inspector se actualizan instantáneamente.
+* **Comprensión del Atributo:** Validación de que el "movimiento" no es más que la modificación de un dato numérico dentro de la memoria del objeto.
+
+**Resultado visual:**
+
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_8.JPG" width="500">
+</div>
+
+---
+*Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
