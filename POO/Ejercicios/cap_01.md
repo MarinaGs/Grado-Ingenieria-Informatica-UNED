@@ -8,9 +8,11 @@ En este ejercicio se practica la instanciación de objetos a partir de clases pr
 * Creación de una instancia de la clase `Square`.
 * Interacción con el banco de objetos de BlueJ.
 
-**Resultado visual:**  
+**Resultado visual:**
 
-![Evidencia del Ejercicio 1.1](../../img/POO/ejercicio_1_1.JPG)
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_1.JPG" width="500">
+</div>
 
 ### Ejercicio 1.2: Interacción con Métodos y Estado
 En este ejercicio se analiza cómo la llamada a métodos modifica los atributos internos de un objeto y su comportamiento visual.
@@ -22,7 +24,9 @@ En este ejercicio se analiza cómo la llamada a métodos modifica los atributos 
 
 **Resultado visual:**
 
-![Evidencia del Ejercicio 1.2](../../img/POO/ejercicio_1_2.JPG)
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_2.JPG" width="500">
+</div>
 
   
 ### Ejercicio 1.3: Parámetros y Modificación de Atributos
@@ -35,7 +39,10 @@ En este ejercicio se introduce el uso de parámetros para definir de forma preci
 
 **Resultado visual:**
 
-![Evidencia del Ejercicio 1.3](../../img/POO/ejercicio_1_3.JPG)
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_3.JPG" width="500">
+</div>
+
 
 ### Ejercicios 1.4, 1.5 y 1.6: Parámetros de tipo String y Tipado
 En esta sección se explora cómo pasar datos de tipo texto a los métodos y cómo Java reacciona ante errores de sintaxis o valores no definidos.
@@ -47,9 +54,18 @@ En esta sección se explora cómo pasar datos de tipo texto a los métodos y có
 
 **Resultado visual:**
 
-![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_4.JPG)  
-![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_5.JPG)  
-![Evidencia de los ejercicios de color](../../img/POO/ejercicio_1_6.JPG)
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_4.JPG" width="500">
+</div>
+
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_5.JPG" width="500">
+</div>
+
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_6.JPG" width="500">
+</div>
+
 
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
