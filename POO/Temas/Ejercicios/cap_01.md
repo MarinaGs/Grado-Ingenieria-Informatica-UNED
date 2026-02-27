@@ -1,7 +1,3 @@
-# Prácticas POO - UNED
-
-Este repositorio contiene los ejercicios de la asignatura de Programación Orientada a Objetos. 
-
 ## Unidad 1: Objetos y Clases
 
 ### Ejercicio 1.1: Creación de Instancias
