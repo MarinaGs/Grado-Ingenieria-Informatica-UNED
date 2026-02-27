@@ -9,7 +9,7 @@ En este ejercicio se practica la instanciación de objetos a partir de clases pr
 * Interacción con el banco de objetos de BlueJ.
 
 **Resultado visual:**
-![Evidencia del Ejercicio 1.1](../../../img/POO/ejercicio_1_1.JPG)
+![Evidencia del Ejercicio 1.1](../../img/POO/ejercicio_1_1.JPG)
 
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
