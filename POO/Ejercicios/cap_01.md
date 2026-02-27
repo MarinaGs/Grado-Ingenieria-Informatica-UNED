@@ -22,7 +22,7 @@ En este ejercicio se analiza cómo la llamada a métodos modifica los atributos 
 
 **Resultado visual:**
 
-![Evidencia del Ejercicio 1.2](../../img/ejercicio_1_2.JPG)
+![Evidencia del Ejercicio 1.2](../../img/POO/ejercicio_1_2.JPG)
 
 
 ---
