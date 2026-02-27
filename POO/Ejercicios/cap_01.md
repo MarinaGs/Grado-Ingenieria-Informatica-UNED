@@ -8,7 +8,8 @@ En este ejercicio se practica la instanciación de objetos a partir de clases pr
 * Creación de una instancia de la clase `Square`.
 * Interacción con el banco de objetos de BlueJ.
 
-**Resultado visual:**
+**Resultado visual:**  
+
 ![Evidencia del Ejercicio 1.1](../../img/POO/ejercicio_1_1.JPG)
 
 ---
