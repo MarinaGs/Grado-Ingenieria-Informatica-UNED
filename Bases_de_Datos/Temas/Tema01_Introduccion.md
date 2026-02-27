@@ -53,8 +53,10 @@ Para que el sistema sea útil debe recuperar los datos eficientemente. La necesi
 * **Nivel lógico.** El nivel inmediatamente superior de abstracción describe qué datos se almacenan en la base de datos y qué relaciones existen entre esos datos. El nivel lógico, por tanto, describe toda la base de datos en términos de un número pequeño de estructuras relativamente simples. Aunque la implementación de esas estructuras simples en el nivel lógico puede involucrar estructuras complejas del nivel físico, los usuarios del nivel lógico no necesitan preocuparse de esta complejidad. Los administradores de bases de datos, que deben decidir la información que se guarda en la base de datos, usan el nivel de abstracción lógico.
 * **Nivel de vistas.** El nivel más elevado de abstracción sólo describe parte de la base de datos. Muchos usuarios del sistema de bases de datos no necesitan toda esta información; en su lugar sólo necesitan tener acceso a una parte de la base de datos. El nivel de abstracción de vistas existe para simplificar su interacción con el sistema.
 
-### 1.3.2 Ejemplares y esquemas
-Las bases de datos van cambiando a lo largo del tiempo conforme la información se inserta y se elimina. La colección de información almacenada en la base de datos en un momento dado se denomina **ejemplar** de la base de datos. El diseño general de la base de datos se denomina **esquema** de la base de datos. Los esquemas se modifican rara vez, si es que se modifican.
+### 1.3.2 Instancias (ejemplares) y esquemas
+Las bases de datos van cambiando a lo largo del tiempo conforme la información se inserta y se elimina.  
+La colección de información almacenada en la base de datos en un momento dado se denomina **instancia** de la base de datos.  
+El diseño general de la base de datos se denomina **esquema** de la base de datos. Los esquemas se modifican rara vez, si es que se modifican.
 
 Los sistemas de bases de datos tienen varios esquemas divididos según los niveles de abstracción:
 * **Esquema físico:** describe el diseño de la base de datos en el nivel físico.
@@ -62,6 +64,8 @@ Los sistemas de bases de datos tienen varios esquemas divididos según los nivel
 * **Subesquemas:** describen diferentes vistas de la base de datos.
 
 Se dice que los programas de aplicación muestran **independencia física respecto de los datos** si no dependen del esquema físico y, por tanto, no hace falta volver a escribirlos si
+
+> **🎙️ Dice el profesor:** "A veces caen"
 
 ## 1.4 Lenguajes de bases de datos
 Los sistemas de bases de datos proporcionan un lenguaje de definición de datos para especificar el esquema de la base de datos y un lenguaje de manipulación de datos para expresar las consultas y las modificaciones de la base de datos. En la práctica, los lenguajes de definición y manipulación de datos no son dos lenguajes diferentes; en cambio, simplemente forman parte de un único lenguaje de bases de datos, como puede ser el muy usado SQL.
