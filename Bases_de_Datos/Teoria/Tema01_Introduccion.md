@@ -17,9 +17,11 @@ Las bases de datos son el motor de la industria actual:
 * **Ventas y Comercio**: Gestión de productos, compras e inventarios.
 * **Producción**: Gestión de la cadena de proveedores, seguimiento de artículos en factorías e inventarios.
 * **Recursos Humanos**: Gestión de empleados, salarios, impuestos y generación de nóminas.
+---
 
 ## 1.2 Propósito de los sistemas de bases de datos
-Los sistemas de bases de datos surgieron en respuesta a los primeros métodos de gestión informatizada de los datos comerciales. A modo de ejemplo de dichos métodos, típicos de los años sesenta, considérese parte de una entidad bancaria que, entre otros datos, guarda información sobre todos los clientes y todas las cuentas de ahorro. Una manera de guardar la información en la computadora es almacenarla en archivos del sistema operativo. Para permitir que los usuarios manipulen la información, el sistema tiene varios programas de aplicación que gestionan los archivos, incluyendo programas para:
+Los sistemas de bases de datos surgieron en respuesta a los primeros métodos de gestión informatizada de los datos comerciales. A modo de ejemplo de dichos métodos, típicos de los años sesenta, considérese parte de una entidad bancaria que, entre otros datos, guarda información sobre todos los clientes y todas las cuentas de ahorro. Una manera de guardar la información en la computadora es almacenarla en archivos del sistema operativo.  
+Para permitir que los usuarios manipulen la información, el sistema tiene varios programas de aplicación que gestionan los archivos, incluyendo programas para:
 * Efectuar cargos o abonos en las cuentas.
 * Añadir cuentas nuevas.
 * Calcular el saldo de las cuentas.
@@ -27,7 +29,7 @@ Los sistemas de bases de datos surgieron en respuesta a los primeros métodos de
 
 Estos programas de aplicación los han escrito programadores de sistemas en respuesta a las necesidades del banco. Se añaden nuevos programas de aplicación al sistema según surgen las necesidades. Por ejemplo, supóngase que una caja de ahorros decide ofrecer cuentas corrientes. En consecuencia, se crean nuevos archivos permanentes que contienen información acerca de todas las cuentas corrientes abiertas en el banco y puede que haya que escribir nuevos programas de aplicación para afrontar situaciones que no se dan en las cuentas de ahorro, como los descubiertos. Así, con el paso del tiempo, se añaden más archivos y programas de aplicación al sistema.
 
-Los sistemas operativos convencionales soportan este sistema de procesamiento de archivos típico. El sistema almacena los registros permanentes en varios archivos y necesita diferentes programas de aplicación para extraer y añadir a los archivos correspondientes. Antes de la aparición de los sistemas gestores de bases de datos (SGBDs), las organizaciones normalmente almacenaban la información en sistemas de este tipo.
+Los sistemas operativos convencionales soportan este sistema de procesamiento de archivos típico. **El sistema almacena los registros permanentes en varios archivos y necesita diferentes programas de aplicación para extraer y añadir a los archivos correspondientes.** Antes de la aparición de los sistemas gestores de bases de datos (SGBDs), las organizaciones normalmente almacenaban la información en sistemas de este tipo.
 
 Guardar la información de la organización en un sistema de procesamiento de archivos tiene una serie de inconvenientes importantes:
 
@@ -42,6 +44,7 @@ Guardar la información de la organización en un sistema de procesamiento de ar
 Estas dificultades, entre otras, motivaron el desarrollo de los sistemas de bases de datos.
 > **Dato Clave**: El SGBD centraliza estas tareas, evitando que cada programa tenga que gestionar sus propios archivos, lo que previene la redundancia y la inconsistencia de los datos.
 
+---
 
 ## 1.3 Visión de los datos
 Un sistema de bases de datos es una colección de datos interrelacionados y un conjunto de programas que permiten a los usuarios tener acceso a esos datos y modificarlos. Una de las principales finalidades de los sistemas de bases de datos es ofrecer a los usuarios una visión abstracta de los datos. Es decir, el sistema oculta ciertos detalles del modo en que se almacenan y mantienen los datos.
@@ -66,6 +69,7 @@ Los sistemas de bases de datos tienen varios esquemas divididos según los nivel
 Se dice que los programas de aplicación muestran **independencia física respecto de los datos** si no dependen del esquema físico y, por tanto, no hace falta volver a escribirlos si
 
 > **🎙️ Dice el profesor:** "A veces caen"
+---
 
 ## 1.4 Lenguajes de bases de datos
 Los sistemas de bases de datos proporcionan un lenguaje de definición de datos para especificar el esquema de la base de datos y un lenguaje de manipulación de datos para expresar las consultas y las modificaciones de la base de datos. En la práctica, los lenguajes de definición y manipulación de datos no son dos lenguajes diferentes; en cambio, simplemente forman parte de un único lenguaje de bases de datos, como puede ser el muy usado SQL.
@@ -98,6 +102,9 @@ Los valores de los datos almacenados en la base de datos deben satisfacer cierta
 * **Autorización.** Diferenciación entre los usuarios en cuanto al tipo de acceso que se les permite (lectura, inserción, actualización, eliminación).
 
 El LDD obtiene como entrada algunas instrucciones y genera una salida. La salida del LDD se coloca en el **diccionario de datos**, que contiene metadatos—es decir, datos sobre datos. El sistema de bases de datos consulta el diccionario de datos antes de leer o modificar los datos reales.
+
+---
+
 ## 1.5 Bases de datos relacionales
 Las bases de datos relacionales se basan en el modelo relacional y usan un conjunto de tablas para representar tanto los datos como las relaciones entre ellos. También incluyen un LMD y un LDD. La mayor parte de los sistemas de bases de datos relacionales comerciales emplean el lenguaje SQL.
 
@@ -118,6 +125,9 @@ select cliente.nombre_cliente
 from cliente
 where cliente.ciudad_cliente = 'Peguerinos'
 ```
+
+---
+
 ## 1.6 Diseño de bases de datos
 Los sistemas de bases de datos se diseñan para gestionar grandes cantidades de información. Esas grandes cantidades de información no existen aisladas. Forman parte del funcionamiento de alguna empresa, cuyo producto final puede que sea la información obtenida de la base de datos o algún dispositivo o servicio para el que la base de datos sólo desempeña un papel secundario.
 
@@ -145,8 +155,6 @@ Para ilustrar el proceso, se consideran las siguientes características de una e
 ### 1.6.3 El modelo entidad-relación
 El modelo de datos entidad-relación (E-R) se basa en un conjunto de objetos básicos, denominados **entidades**, y de las **relaciones** entre esos objetos. 
 
-
-
 La estructura lógica se expresa mediante un diagrama E-R con:
 * **Rectángulos:** Conjuntos de entidades.
 * **Elipses:** Atributos.
@@ -159,6 +167,8 @@ El objetivo es generar esquemas que permitan almacenar información sin redundan
 * **Imposibilidad de representar determinada información:** Por ejemplo, no poder guardar un cliente si aún no tiene una cuenta, a menos que se usen **valores nulos**.
 
 Los valores nulos indican que el valor no existe o es desconocido, pero resultan difíciles de tratar y es preferible evitarlos mediante un buen diseño original.
+
+---
 
 ## 1.7 Bases de datos basadas en objetos y semiestructuradas
 Los investigadores han desarrollado modelos de datos para tratar dominios donde el modelo relacional tradicional presenta limitaciones.
@@ -178,8 +188,6 @@ Permiten que elementos del mismo tipo tengan conjuntos de atributos diferentes. 
 
 ## 1.8 Almacenamiento de datos y consultas
 Un sistema de bases de datos se divide en dos componentes funcionales principales: el gestor de almacenamiento y el procesador de consultas.
-
-
 
 ### 1.8.1 Gestor de almacenamiento
 Es el módulo que proporciona la interfaz entre los datos de bajo nivel (almacenados en disco) y los programas de aplicación o consultas. Sus componentes son:
@@ -206,7 +214,72 @@ Una **transacción** es una unidad lógica de trabajo que debe cumplir con las p
 
 Es responsabilidad del sistema de bases de datos realizar la **recuperación de fallos** y el **control de concurrencia** para evitar inconsistencias cuando varios usuarios acceden a los datos simultáneamente.
 
+---
 
+## 1.10 Minería y análisis de datos
+
+La **minería de datos** se refiere al proceso de análisis **semiautomático** de grandes bases de datos para descubrir patrones útiles, reglas y tendencias.
+
+### 1.10.1 Características principales
+A diferencia del aprendizaje automático (Machine Learning) o la estadística pura, la minería de datos se distingue por:
+* **Volumen:** Maneja grandes masas de datos.
+* **Almacenamiento:** Los datos se encuentran principalmente en **disco** (almacenamiento secundario).
+* **KDD:** Se conoce como el proceso de "descubrimiento de conocimiento en bases de datos".
+
+### 1.10.2 Tipos de conocimiento descubierto
+1. **Reglas de asociación:** Patrones condicionales con grados de **apoyo** y **confianza**.
+2. **Modelos predictivos:** Ecuaciones que relacionan variables para predecir resultados.
+
+### 1.10.3 Soporte a la toma de decisiones
+Para facilitar el análisis, se utilizan técnicas que complementan al SQL tradicional:
+* **OLAP (Procesamiento Analítico en Línea):** Permite visualizar datos desde múltiples dimensiones.
+* **Herramientas de resumen:** Realizan cálculos previos para dar respuestas rápidas.
+* **Recuperación de Información (IR):** Se encarga de la consulta de **datos textuales no estructurados** mediante palabras clave y análisis de relevancia.
+
+---
+
+## 1.11 Arquitectura de los Sistemas de Bases de Datos
+
+La arquitectura de un SGBD está condicionada por el sistema informático sobre el que se ejecuta. Según la distribución de sus componentes, se clasifican en:
+* **Sistemas Centralizados:** El SGBD y los datos residen en una única máquina.
+* **Sistemas Cliente-Servidor:** Una máquina servidora atiende las peticiones de múltiples clientes.
+* **Sistemas Paralelos:** Aprovechan múltiples procesadores para acelerar el procesamiento.
+* **Sistemas Distribuidos:** Los datos se reparten en máquinas geográficamente separadas, lo que garantiza alta disponibilidad y resistencia a fallos.
+
+### 1.11.1 Arquitecturas de 2 y 3 capas
+Dependiendo de dónde resida la lógica de negocio, distinguimos:
+
+1.  **Arquitectura de dos capas (2-tier):** * La aplicación reside en el cliente.
+    * El cliente llama directamente a la base de datos (mediante **ODBC** o **JDBC**).
+2.  **Arquitectura de tres capas (3-tier):** * **Capa 1 (Cliente):** Interfaz de usuario (formularios, web). No hay llamadas directas a la BD.
+    * **Capa 2 (Servidor de aplicaciones):** Contiene la **lógica de negocio**. Se comunica con el cliente y con la BD.
+    * **Capa 3 (Servidor de BD):** Gestiona los datos y las consultas.
+    * *Ideal para aplicaciones web de gran tamaño.*
+
+---
+
+## 1.12 Usuarios y Administradores de la BD
+
+### 1.12.1 Tipos de Usuarios e Interfaces
+La interacción con el sistema define cuatro perfiles:
+
+* **Usuarios normales (no sofisticados):** Interactúan a través de programas de aplicación ya escritos (ej. un cajero o un usuario web rellenando un formulario).
+* **Programadores de aplicaciones:** Profesionales que desarrollan el software y las interfaces (utilizando herramientas **DRA** o de desarrollo rápido).
+* **Usuarios sofisticados (analistas):** Interactúan mediante lenguajes de consulta (SQL) directamente en el procesador de consultas.
+* **Usuarios especializados:** Escriben aplicaciones que no encajan en el marco tradicional, como sistemas **GIS**, CAD, sistemas expertos o de modelado del entorno.
+
+### 1.12.2 Administrador de Bases de Datos (ABD/DBA)
+Es la persona con control centralizado sobre el sistema. Sus funciones principales son:
+
+1.  **Definición del esquema:** Crea la estructura original mediante instrucciones LDD.
+2.  **Definición de la estructura y método de acceso:** Organización física de los datos.
+3.  **Modificación del esquema:** Para adaptarse a nuevas necesidades o mejorar el rendimiento.
+4.  **Concesión de autorización:** Regula los permisos de acceso a cada usuario.
+5.  **Mantenimiento rutinario:** * Copias de seguridad (Backups).
+    * Gestión de espacio libre en disco.
+    * Supervisión del rendimiento (Monitorización).
+
+---
 
 ## 💡 Mis Notas de la UNED
 > *Añade aquí conceptos de las videoconferencias o dudas sobre el libro base.*
