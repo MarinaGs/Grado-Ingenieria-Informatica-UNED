@@ -418,13 +418,22 @@ void send(String message)
 ```
 
 ## Ejercicio 1.34
-**scriba la cabecera de un método denominado 'average' que tenga dos parámetros, ambos de tipo 'int', y devuelva un valor de tipo int.**
+**Escriba la cabecera de un método denominado 'average' que tenga dos parámetros, ambos de tipo 'int', y devuelva un valor de tipo int.**
 
 ```java
-void send(String message)
+public int average(int num1, int num2)
 ```
 
+## Ejercicio 1.35
+**Mire el libro que lee en este momento. ¿Es un objeto o una clase? Si es una clase, enumere algunos objetos. Si es un objeto, indique cuál es su clase.**  
 
+* Respuesta: Es un objeto (una instancia concreta).
+* Clase: Su clase es Libro (o Book)
+
+## Ejercicio 1.36
+**¿Puede un objeto tener varias clases distintas? Explique su respuesta.**  
+
+No. Un objeto se instancia a partir de una única clase específica (la clase que aparece tras el operador new).
 
 
 ---
