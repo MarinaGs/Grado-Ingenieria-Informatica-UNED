@@ -181,10 +181,6 @@ Reflexión técnica sobre la implementación interna de la clase `Picture` y la 
 **Concepto Clave (Composición):**
 La composición es una relación entre clases donde una clase (el "todo") utiliza objetos de otras clases (las "partes") como sus propios atributos. Es el principio de "un objeto tiene un...".
 
-**Resultado visual:**
-<div align="center">
-  <img src="../../img/POO/ejercicio_1_14.JPG" width="500">
-</div>
 
 
 ## Ejercicio 1.15: Inspección del Código Fuente
@@ -294,6 +290,142 @@ Primera intervención directa en el código fuente para alterar el comportamient
 <div align="center">
   <img src="../../img/POO/ejercicio_1_21.JPG" width="500">
 </div>
+
+## Ejercicio 1.22: Errores de Sintaxis y Depuración
+Experimentación con la rigidez sintáctica de Java y la respuesta del compilador ante errores.
+
+**Hitos logrados:**
+* **Provocación de Errores:** Introducción deliberada de fallos (eliminar un punto y coma `;` o una llave `{`) para observar la reacción de BlueJ.
+* **Lectura de Mensajes de Error:** Interpretación de las notificaciones en la barra de estado (ej. "';' expected").
+* **Sensibilidad a las Reglas:** Comprensión de que el código fuente debe ser sintácticamente perfecto para que la máquina pueda procesarlo.
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_22.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.23: El Proceso de Compilación
+Estudio del mecanismo que transforma el código fuente (texto legible por humanos) en código máquina ejecutable por la JVM.
+
+**Hitos logrados:**
+* **Uso del Botón Compile:** Ejecución del proceso de traducción del archivo `.java` tras realizar cambios.
+* **Estado de la Clase:** Observación de cómo la apariencia de la clase en el diagrama de BlueJ cambia (de rayado a sólido) una vez compilada con éxito.
+* **Vinculación Código-Objeto:** Validación de que no es posible crear nuevas instancias de una clase si el código fuente contiene errores o no ha sido compilado.
+
+**Concepto Clave (Compilación):**
+A diferencia de Python, Java requiere un paso intermedio donde un programa (el compilador) revisa todo el código en busca de errores antes de permitir su ejecución. Si el código no compila, el programa "no existe" para el ordenador.
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_23.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.24: Ajuste de Parámetros de Posición
+Modificación de las coordenadas iniciales de los componentes para reestructurar la escena visual.
+
+**Hitos logrados:**
+* **Control de Coordenadas:** Modificación de los valores de `xPosition` y `yPosition` en el constructor de la clase `Circle` (el sol).
+* **Posicionamiento Relativo:** Ajuste de la ubicación del sol para que se desplace a una posición específica en el lienzo (ej. la esquina superior derecha).
+* **Validación de Cambios:** Uso del ciclo "Modificar -> Compilar -> Instanciar" para verificar el nuevo punto de origen del objeto.
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_24.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.25: Modificación de Atributos de Dimensión
+Personalización de la escala de los objetos mediante la alteración de sus campos de tamaño en el código fuente.
+
+**Hitos logrados:**
+* **Alteración de Escala:** Cambio de los valores de `diameter` en el círculo y `height`/`width` en los cuadrados.
+* **Proporcionalidad:** Comprensión de cómo el cambio de tamaño afecta a la estética general de la escena (`Picture`) y la necesidad de reajustar posiciones tras cambiar dimensiones.
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_25.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.26: Invocación de Métodos en el Constructor
+Análisis de cómo un objeto puede realizar acciones automáticas en el momento exacto de su nacimiento.
+
+**Hitos logrados:**
+* **Automatización Inicial:** Observación de cómo el constructor de `Picture` llama a métodos como `makeVisible()` automáticamente.
+* **Encapsulamiento de Acciones:** Comprensión de que el constructor no solo asigna datos (estado), sino que también puede disparar comportamientos (acciones) para que el objeto esté listo para el usuario desde el segundo cero.
+
+**Concepto Clave (Constructor):**
+El constructor es un método especial que tiene el mismo nombre que la clase. Su función es asegurar que, al crear el objeto, este tenga un estado válido y realice las acciones iniciales necesarias (como hacerse visible).
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_26.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.27: Ampliación de la Composición (El segundo Sol)
+Práctica de declaración y creación de múltiples instancias de una misma clase dentro de un objeto contenedor.
+
+**Hitos logrados:**
+* **Declaración de Variables:** Inclusión de un segundo objeto de tipo `Circle` en los campos de la clase `Picture` (ej. `private Circle sun2;`).
+* **Instanciación Múltiple:** Creación del nuevo objeto en el constructor mediante la palabra clave `new`.
+* **Diferenciación de Estado:** Configuración del segundo sol con una posición y color distintos al original, demostrando que cada instancia mantiene su propia identidad.
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_27.JPG" width="500">
+</div>
+
+
+## Ejercicio 1.28: Gestión de Visibilidad en Cascada
+Análisis de la propagación de mensajes desde el objeto coordinador a todos sus componentes.
+
+**Hitos logrados:**
+* **Invocación Colectiva:** Modificación del método `draw()` para incluir la llamada a `sun2.makeVisible()`.
+* **Consistencia Visual:** Verificación de que, al añadir un nuevo objeto, se deben actualizar todos los métodos de control de la clase para mantener la coherencia (si la casa se oculta, ambos soles deben ocultarse).
+
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_28.JPG" width="500">
+</div>
+
+## Ejercicio 1.29: Implementación de Nuevos Métodos (setBlackAndWhite)
+Estudio de la lógica de transformación masiva de estado a través de un solo comando.
+
+**Hitos logrados:**
+* **Delegación de Tareas:** Análisis de cómo el método
+* 
+**Resultado visual:**
+<div align="center">
+  <img src="../../img/POO/ejercicio_1_29.JPG" width="500">
+</div>
+
+## Ejercicio 1.32
+**¿Qué habría que hacer para añadir un nuevo campo, por ejemplo uno denominado `name` a un objeto círculo?**
+
+Para añadir un nuevo campo a un objeto, es necesario **modificar la definición de su clase**. En el código fuente de la clase `Circulo`, se debe declarar la variable de instancia (atributo):
+
+```java
+private String name;
+```
+## Ejercicio 1.33
+**Escriba la signatura de un método denominado 'send' que tenga un parámetro de tipo String y no devuelva ningún valor.**
+
+```java
+void send(String message)
+```
+
+## Ejercicio 1.34
+**scriba la cabecera de un método denominado 'average' que tenga dos parámetros, ambos de tipo 'int', y devuelva un valor de tipo int.**
+
+```java
+void send(String message)
+```
+
+
+
 
 ---
 *Nota: Proyecto desarrollado como parte del Grado en Ingeniería Informática.*
